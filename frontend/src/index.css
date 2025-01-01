@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-midnight-blue {
+  background-color: rgb(14, 26, 49);
+}
+
+.CinemaPlan {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.Movies {
+  margin-bottom: 24px;
+}
+
+.ShowCase {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.ShowCase li {
+  margin: 0 12px;
+}
+
+.Cinema {
+  margin-bottom: 18px;
+  perspective: 400px;
+  display: grid;
+  place-items: center;
+  grid-gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.Cinema .screen {
+  height: 12px;
+  border: 1px solid #2ecc71;
+  border-radius: 3px;
+  background: white;
+  width: 80%;
+  transform: rotateX(-45deg) scale(1.5);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.Cinema .seats {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(28, 1fr);
+  justify-items: center;
+}
+
+.Cinema .seats .seat:nth-of-type(8n + 2) {
+  margin-right: 8px;
+}
+
+.Cinema .seats .seat:nth-of-type(8n + 6) {
+  margin-right: 8px;
+}
+
+.Cinema .seats .seat:not(.occupied):hover,
+.Cinema .seats .seat:not(.occupied):focus {
+  cursor: pointer;
+  background: #95cb18;
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
+}
+
+.Cinema .seats .seat.selected::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background: transparent;
+  border: 0.5px solid #2ecc71;
+  animation: show-off 0.8s;
+  visibility: hidden;
+}
+
+@keyframes show-off {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.seat {
+  display: inline-block;
+  background: white;
+  border: 0.5px solid #ffce20; /* Yellow border */
+  width: 22px;
+  height: 18px;
+  border-radius: 4px; /* Rounded corners for the seat */
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.seat.selected {
+  background: #2ecc71 !important;
+  border-color: #2ecc71; /* Green border when selected */
+}
+
+.seat.occupied {
+  background: #ff3a1e;
+  border-color: #ff3a1e; /* Red border for occupied seats */
+}
+
+.seat.recommended {
+  background: #a020f0;
+  border-color: #a020f0; /* Purple border for recommended seats */
+}
+
+.info .count {
+  color: #2ecc71;
+}
+
+.info .total {
+  color: #2ecc71;
+}
+
+.info .selected-seats {
+  color: #2ecc71;
+}
