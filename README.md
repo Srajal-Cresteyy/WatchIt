@@ -1,6 +1,6 @@
 # WatchId - Book Tickets and Seats
 
-![WatchIt](/demo.gif)
+![WatchIt](WatchIt/demo.gif)
 
 Book seats for your event or movies 
 
