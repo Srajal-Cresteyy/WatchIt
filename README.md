@@ -45,25 +45,25 @@ To get started with this project, you will need to have the following installed 
 1. **Clone the application**
 
 ```zsh
-git clone https://github.com/EgonSaks/cinema-ticket-booking-system.git
+git clone [(https://github.com/Srajal-Cresteyy/WatchIt.git](https://github.com/Srajal-Cresteyy/WatchIt.git))
 cd backend
 ```
 2. **Install PostgresSQL and PGAdmin GUI**
 
-Refer the docs [installing and starting MySQL on different platforms]([https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing](https://www.postgresql.org/docs/current/tutorial-install.html)).
+Refer the docs [installing and starting PostgresSql on different platforms]((https://www.postgresql.org/docs/current/tutorial-install.html)).
 
 
 2. **Create username and password as per your PostgresSql installation**
 
 	+ open `src/main/resources/application.properties` file.
 
-	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your mysql installation
+	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your PostgresSql installation
 
 2. **Create a new Database named cinema**
 
 	+ open `src/main/resources/application.properties` file.
 
-	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your mysql installation
+	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your PostgresSql installation
 
 3. **Run the app**
 
